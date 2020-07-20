@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tv_width">0dp</dimen>
+    <dimen name="tv_margin">16dp</dimen>
+
+    <!--    <dimen name="text_view" parent="android.Widget.TextView">-->
+<!--        <item name="tv_width">@dimens/tv_width</item>-->
+<!--        <item name="tv_width">@dimens/tv_width</item>-->
+<!--    </dimen>-->
+
+</resources>

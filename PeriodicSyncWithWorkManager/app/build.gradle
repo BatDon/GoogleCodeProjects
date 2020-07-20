@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.example.android.background"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+
+//            proguardFile 'proguard-rules.txt'
+//            proguardFiles -keepclassmembers class * extends androidx.work.Worker {
+//            public <init>(android.content.Context,androidx.work.WorkerParameters);
+        }
+
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    // COMPLETED (1) Add gradle dependency for Firebase Job Dispatcher
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.6'
+
+    //implementation "androidx.work:work-*:2.4.0-alpha03"
+    implementation "androidx.work:work-runtime:2.4.0-beta01"
+    //implementation 'androidx.work:work-runtime:2.3.4'
+}

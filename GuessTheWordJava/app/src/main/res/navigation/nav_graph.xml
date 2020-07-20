@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/title_destination">
+
+    <fragment
+        android:id="@+id/title_destination"
+        android:name="com.test.table.guessthewordjava.TitleFragment"
+        android:label="title_fragment"
+        tools:layout="@layout/title_fragment">
+        <action
+            android:id="@+id/action_title_to_game"
+            app:destination="@id/game_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/game_destination"
+        android:name="com.test.table.guessthewordjava.GameFragment"
+        android:label="game_fragment"
+        tools:layout="@layout/game_fragment">
+        <action
+            android:id="@+id/action_game_to_score"
+            app:destination="@id/score_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+
+<!--        <argument-->
+<!--            android:name="score"-->
+<!--            android:defaultValue="0"-->
+<!--            app:argType="integer" />-->
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/score_destination"
+        android:name="com.test.table.guessthewordjava.ScoreFragment"
+        android:label="score_fragment"
+        tools:layout="@layout/score_fragment">
+        <action
+            android:id="@+id/action_restart"
+            app:destination="@+id/game_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+        <argument
+            android:name="score"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>
+<!--        <argument-->
+<!--            android:name="score"-->
+<!--            android:defaultValue="0"-->
+<!--            app:argType="integer" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/game_destination"-->
+<!--        android:name="com.test.table.guessthewordjava.GameFragment"-->
+<!--        android:label="game_fragment"-->
+<!--        tools:layout="@layout/game_fragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_game_destination_to_score_destination"-->
+<!--            app:destination="@id/score_destination" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/score_destination"-->
+<!--        android:name="com.test.table.guessthewordjava.ScoreFragment"-->
+<!--        android:label="score_fragment"-->
+<!--        tools:layout="@layout/score_fragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_restart"-->
+<!--            app:destination="@+id/game_destination"-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_right"-->
+<!--            app:popExitAnim="@anim/slide_out_left"-->
+<!--            app:popUpTo="@+id/title_destination" />-->
+<!--&lt;!&ndash;        <argument&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name="score"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:defaultValue="0"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:argType="integer" />&ndash;&gt;-->
+<!--    </fragment>-->
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/title_destination">
+
+    <fragment
+        android:id="@+id/title_destination"
+        android:name="com.test.table.guessthewordjava.TitleFragment"
+        android:label="title_fragment"
+        tools:layout="@layout/title_fragment">
+        <action
+            android:id="@+id/action_title_to_game"
+            app:destination="@id/game_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/game_destination"
+        android:name="com.test.table.guessthewordjava.GameFragment"
+        android:label="game_fragment"
+        tools:layout="@layout/game_fragment">
+        <action
+            android:id="@+id/action_game_to_score"
+            app:destination="@id/score_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+
+        <        <argument-->
+    <!--            android:name="score"-->
+    <!--            android:defaultValue="0"-->
+    <!--            app:argType="integer" />-->
+<!--    </fragment>-->
+
+
+<!--<fragment-->
+<!--android:id="@+id/score_destination"-->
+<!--android:name="com.test.table.guessthewordjava.ScoreFragment"-->
+<!--android:label="score_fragment"-->
+<!--tools:layout="@layout/score_fragment">-->
+<!--<action-->
+<!--    android:id="@+id/action_restart"-->
+<!--    app:destination="@+id/game_destination"-->
+<!--    app:enterAnim="@anim/slide_in_right"-->
+<!--    app:exitAnim="@anim/slide_out_left"-->
+<!--    app:popEnterAnim="@anim/slide_in_right"-->
+<!--    app:popExitAnim="@anim/slide_out_left"-->
+<!--    app:popUpTo="@+id/title_destination" />-->
+<!--<argument-->
+<!--    android:name="score"-->
+<!--    android:defaultValue="0"-->
+<!--    app:argType="integer" />-->
+<!--&lt;!&ndash;        <argument&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name="score"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:defaultValue="0"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:argType="integer" />&ndash;&gt;-->
+<!--</fragment>-->
+<!--    &lt;!&ndash;    <fragment&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/game_destination"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:name="com.test.table.guessthewordjava.GameFragment"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:label="game_fragment"&ndash;&gt;-->
+<!--    &lt;!&ndash;        tools:layout="@layout/game_fragment">&ndash;&gt;-->
+<!--    &lt;!&ndash;        <action&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/action_game_destination_to_score_destination"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:destination="@id/score_destination" />&ndash;&gt;-->
+<!--    &lt;!&ndash;    </fragment>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <fragment&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/score_destination"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:name="com.test.table.guessthewordjava.ScoreFragment"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:label="score_fragment"&ndash;&gt;-->
+<!--    &lt;!&ndash;        tools:layout="@layout/score_fragment">&ndash;&gt;-->
+<!--    &lt;!&ndash;        <action&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/action_restart"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:destination="@+id/game_destination"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:enterAnim="@anim/slide_in_right"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:exitAnim="@anim/slide_out_left"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:popEnterAnim="@anim/slide_in_right"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:popExitAnim="@anim/slide_out_left"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:popUpTo="@+id/title_destination" />&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;        <argument&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:name="score"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:defaultValue="0"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:argType="integer" />&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;    </fragment>&ndash;&gt;-->
+<!--    </navigation>&ndash;&gt;-->

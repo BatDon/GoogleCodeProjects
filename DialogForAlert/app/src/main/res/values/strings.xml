@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Dialog For Alert</string>
+    <string name="alert_text">Hello World!Tap to test the alert</string>
+    <string name="alert_title">Alert</string>
+    <string name="alert_message">Click Ok to continue, or Cancel to stop:</string>
+    <string name="ok_message">Pressed OK</string>
+    <string name="cancel_message">Pressed Cancel</string>
+    <string name="alert">alert</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

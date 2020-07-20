@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">String Lokalisationsbeispiel</string>
+    <string name="hello_world">Hallo Welt</string>
+    <string name="do_something">Tu etwas</string>
+    <string name="toast">Das ist ein Toast</string>
+</resources>

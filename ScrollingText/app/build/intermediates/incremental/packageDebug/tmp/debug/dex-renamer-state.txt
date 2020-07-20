@@ -1,0 +1,4 @@
+#Mon Apr 27 13:25:22 COT 2020
+base.0=/home/david/AndroidStudioProjects/GoogleCodeLabs/ScrollingText/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
